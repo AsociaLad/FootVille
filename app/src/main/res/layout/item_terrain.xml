@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewNomTerrain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/design_default_color_primary"
+            android:text="Nom du terrain"/>
+
+        <TextView
+            android:id="@+id/textViewAdresseTerrain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:text="Adresse du terrain"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type: "
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewTypeSurface"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type de surface"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" | Capacité: "
+                android:layout_marginStart="8dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textViewCapaciteTerrain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewDisponibiliteTerrain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/holo_green_light"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textColor="@android:color/white"
+            android:text="Disponible"/>
+
+        <Button
+            android:id="@+id/buttonReserverTerrain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Réserver"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

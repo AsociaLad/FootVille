@@ -1,0 +1,84 @@
+<resources>
+    <string name="app_name">FootVille</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="menu_home">Accueil</string>
+    <string name="menu_terrains">Terrains</string>
+    <string name="menu_reservations">Mes réservations</string>
+    <string name="menu_equipes">Mes équipes</string>
+    <string name="menu_matchs">Mes matchs</string>
+    <string name="menu_profil">Mon profil</string>
+    <string name="menu_gallery">Galerie</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <!-- Login Activity -->
+    <string name="login_title">FootVille</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Mot de passe</string>
+    <string name="login_button">Se connecter</string>
+    <string name="login_register_link">Pas encore de compte? S\'inscrire</string>
+
+    <!-- Register Activity -->
+    <string name="register_title">Créer un compte</string>
+    <string name="register_nom">Nom</string>
+    <string name="register_prenom">Prénom</string>
+    <string name="register_email">Email</string>
+    <string name="register_telephone">Téléphone</string>
+    <string name="register_password">Mot de passe</string>
+    <string name="register_confirm_password">Confirmer le mot de passe</string>
+    <string name="register_button">S\'inscrire</string>
+    <string name="register_login_link">Déjà inscrit? Se connecter</string>
+
+    <!-- Splash Screen -->
+    <string name="splash_title">Foot Ville</string>
+    <string name="splash_description">Application de gestion des terrains de football</string>
+
+    <!-- Terrains -->
+    <string name="terrain_aucun">Aucun terrain disponible pour cette ville</string>
+    <string name="terrain_nom">Nom du terrain</string>
+    <string name="terrain_adresse">Adresse du terrain</string>
+    <string name="terrain_type">Type: </string>
+    <string name="terrain_type_surface">Type de surface</string>
+    <string name="terrain_capacite">Capacité: </string>
+    <string name="terrain_disponible">Disponible</string>
+    <string name="terrain_non_disponible">Non disponible</string>
+    <string name="terrain_reserver">Réserver</string>
+    <string name="nouvelle_reservation">Nouvelle réservation</string>
+    <string name="details_terrain">Détails du terrain</string>
+    <string name="nom_terrain">Nom du terrain</string>
+    <string name="adresse_terrain">Adresse du terrain</string>
+    <string name="terrain_info">Type: %1$s | Capacité: %2$d</string>
+    <string name="date_heure_debut">Date et heure de début</string>
+    <string name="choisir_date">Choisir la date</string>
+    <string name="choisir_heure">Choisir l\'heure</string>
+    <string name="date_heure_debut_vide">Date et heure de début non sélectionnées</string>
+    <string name="date_heure_fin">Date et heure de fin</string>
+    <string name="date_heure_fin_vide">Date et heure de fin non sélectionnées</string>
+    <string name="commentaire_optionnel">Commentaire (optionnel)</string>
+    <string name="confirmer_reservation">Confirmer la réservation</string>
+    <string name="annuler">Annuler</string>
+
+    <!-- Menu items -->
+    <string name="menu_item_accueil">Accueil</string>
+    <string name="menu_item_terrains">Terrains</string>
+    <string name="menu_item_reservations">Mes réservations</string>
+    <string name="menu_item_equipes">Mes équipes</string>
+    <string name="menu_item_matchs">Mes matchs</string>
+    <string name="menu_item_utilisateur">Utilisateur</string>
+    <string name="menu_item_profil">Mon profil</string>
+    <string name="menu_item_deconnexion">Déconnexion</string>
+
+    <!-- Navigation Header -->
+    <string name="nav_header_title">FootVille</string>
+    <string name="nav_header_subtitle">contact@footville.com</string>
+    <string name="nav_header_desc">Header de navigation</string>
+    <string name="action_settings">Paramètres</string>
+
+    <!-- Nouvelle réservation -->
+    <string name="details_du_terrain">Détails du terrain</string>
+    <string name="nom_du_terrain">Nom du terrain</string>
+    <string name="adresse_du_terrain">Adresse du terrain</string>
+    <string name="type_capacite">Type: Gazon naturel | Capacité: 22</string>
+    <string name="date_heure_debut_non_selectionnees">Date et heure de début non sélectionnées</string>
+    <string name="date_heure_fin_non_selectionnees">Date et heure de fin non sélectionnées</string>
+</resources>

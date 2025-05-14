@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.reservations.NouvelleReservationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nouvelle_reservation"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Informations du terrain -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/details_du_terrain"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/textViewNomTerrainDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/nom_du_terrain"/>
+
+                <TextView
+                    android:id="@+id/textViewAdresseTerrainDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/adresse_du_terrain"/>
+
+                <TextView
+                    android:id="@+id/textViewInfosTerrainDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/type_capacite"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Date et heure de début -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_heure_debut"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <Button
+                android:id="@+id/buttonDateDebut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/choisir_date"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+            <Button
+                android:id="@+id/buttonHeureDebut"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/choisir_heure"
+                android:layout_marginStart="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewDateHeureDebut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/date_heure_debut_non_selectionnees"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Date et heure de fin -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date_heure_fin"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <Button
+                android:id="@+id/buttonDateFin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/choisir_date"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+            <Button
+                android:id="@+id/buttonHeureFin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/choisir_heure"
+                android:layout_marginStart="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewDateHeureFin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/date_heure_fin_non_selectionnees"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Commentaire -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutCommentaire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/commentaire_optionnel"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextCommentaire"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="3"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Boutons -->
+        <Button
+            android:id="@+id/buttonConfirmerReservation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/confirmer_reservation"
+            android:layout_marginTop="24dp"/>
+
+        <Button
+            android:id="@+id/buttonAnnuler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/annuler"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_marginTop="8dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarReservation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
