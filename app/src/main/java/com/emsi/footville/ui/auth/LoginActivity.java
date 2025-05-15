@@ -15,7 +15,7 @@ import com.emsi.footville.api.ApiService;
 import com.emsi.footville.databinding.ActivityLoginBinding;
 import com.emsi.footville.models.Utilisateur;
 import com.emsi.footville.utils.SessionManager;
-import com.emsi.footville.ui.auth.LoginActivity;
+import com.google.firebase.auth.FirebaseAuth;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private ActivityLoginBinding binding;
     private ApiService apiService;
     private SessionManager sessionManager;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class LoginActivity extends AppCompatActivity {
 
         apiService = ApiClient.getClient().create(ApiService.class);
         sessionManager = new SessionManager(this);
+        mAuth = FirebaseAuth.getInstance();
 
         // Si l'utilisateur est déjà connecté, rediriger vers MainActivity
         if (sessionManager.isLoggedIn()) {
@@ -90,5 +92,16 @@ public class LoginActivity extends AppCompatActivity {
                 Toast.makeText(LoginActivity.this, "Erreur de connexion: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void loginWithFirebase(String email, String password) {
+        mAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this, task -> {
+                if (task.isSuccessful()) {
+                    // Connexion réussie
+                } else {
+                    // Erreur
+                }
+            });
     }
 }

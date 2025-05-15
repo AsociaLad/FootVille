@@ -14,6 +14,7 @@ import com.emsi.footville.databinding.ActivityRegisterBinding;
 import com.emsi.footville.models.Role;
 import com.emsi.footville.models.Utilisateur;
 import com.emsi.footville.ui.auth.LoginActivity;
+import com.google.firebase.auth.FirebaseAuth;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -23,6 +24,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private ActivityRegisterBinding binding;
     private ApiService apiService;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         apiService = ApiClient.getClient().create(ApiService.class);
+        mAuth = FirebaseAuth.getInstance();
 
         binding.registerButton.setOnClickListener(view -> {
             if (validateForm()) {
@@ -133,6 +136,7 @@ public class RegisterActivity extends AppCompatActivity {
                 binding.progressBarRegister.setVisibility(View.GONE);
 
                 if (response.isSuccessful() && response.body() != null) {
+                    registerUserWithFirebase(email, password);
                     Toast.makeText(RegisterActivity.this, "Inscription réussie! Connectez-vous", Toast.LENGTH_LONG).show();
 
                     // Redirection vers l'écran de connexion
@@ -155,5 +159,16 @@ public class RegisterActivity extends AppCompatActivity {
                 Toast.makeText(RegisterActivity.this, "Erreur de connexion: " + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void registerUserWithFirebase(String email, String password) {
+        mAuth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this, task -> {
+                if (task.isSuccessful()) {
+                    // Inscription réussie
+                } else {
+                    // Erreur
+                }
+            });
     }
 }
